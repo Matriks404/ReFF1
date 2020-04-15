@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{CD1AFD5D-9F79-4C23-8946-7C244FD233DE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ReFF1/Program.cs">
+    <Files>
+      <File FileName="ReFF1/Program.cs" Line="914" Column="145" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ReFF1" expanded="True">
+            <Node name="ReFF1" expanded="True">
+              <Node name="_Roms" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ReFF1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

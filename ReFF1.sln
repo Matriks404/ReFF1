@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReFF1", "ReFF1\ReFF1.csproj", "{CD1AFD5D-9F79-4C23-8946-7C244FD233DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD1AFD5D-9F79-4C23-8946-7C244FD233DE}.Debug|x86.ActiveCfg = Debug|x86
+		{CD1AFD5D-9F79-4C23-8946-7C244FD233DE}.Debug|x86.Build.0 = Debug|x86
+		{CD1AFD5D-9F79-4C23-8946-7C244FD233DE}.Release|x86.ActiveCfg = Release|x86
+		{CD1AFD5D-9F79-4C23-8946-7C244FD233DE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
