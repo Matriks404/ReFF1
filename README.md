@@ -1,14 +1,14 @@
 # ReFF1
 
-## About
-
 **ReFF1** is a reimplemented Final Fantasy I engine.
+
+## About
+Reimplementation as is being able to run the original games by extracting original data and running on this engine (with possiblity of modding, or creating a whole new game!).
 
 For now only NES versions are supported:
 - Final Fantasy I (Japan)
 - Final Fantasy I (USA)
-- Final Fantasy I & II (Japan) 
-    Of course the Final Fantasy II in this package is not supported yet.
+- Final Fantasy I & II (Japan) (Of course the Final Fantasy II in this package is not supported yet.)
 
 ## Getting started
 
