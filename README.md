@@ -10,6 +10,10 @@ For now only NES versions are supported:
 - Final Fantasy I (USA)
 - Final Fantasy I & II (Japan) (Of course the Final Fantasy II in this package is not supported yet.)
 
+## Screenshot
+
+![Text introduction of the Japanese and USA ROM](/Resources/Screenshot.png)
+
 ## Getting started (on GNU/Linux)
 
 After compiling run the executable with `mono ReFF1.exe <argument> <parameter>`.

@@ -911,7 +911,7 @@ namespace ReFF1
                 print_chars_at_range(0x37F30, 0x3800F, (int)GameLanguage.English, ref rom);
             }
 
-            Console.WriteLine("\nTODO:\tRefactor this shit, and actually add game instance to appropriate directory (with XML of the Intro text).");
+            //Console.WriteLine("\nTODO:\tRefactor this shit, and actually add game instance to appropriate directory (with XML of the Intro text).");
         }
 
         public static void remove(string name)
