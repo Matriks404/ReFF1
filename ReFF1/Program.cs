@@ -195,7 +195,10 @@ namespace ReFF1
                 for (int i = from; i <= to; i++)
                 {
                     if (gameLang == (int)GameLanguage.Japanese)
+                    {
+                        //Console.Write("({0:X})", romRef[i]);
                         Console.Write(print_jpn_char((char)romRef[i]));
+                    }
                     else if (gameLang == (int)GameLanguage.English)
                         Console.Write(print_eng_char((char)romRef[i]));
                 }
@@ -203,6 +206,9 @@ namespace ReFF1
 
             string print_jpn_char(char character)
             {
+                if (character >= 0x80 && character <= 0x89) // 0-9
+                    return Char.ToString((char)(character - 0x50));
+
                 switch (character)
                 {
                     case (char)0x0:
@@ -552,217 +558,216 @@ namespace ReFF1
             {
                 if (character >= 0x80 && character <= 0x89) // 0-9
                     return Char.ToString((char)(character - 0x50));
-                else if (character >= 0x8A && character <= 0xA3) // A-Z
-                    return Char.ToString((char)(character - 0x49));
-                else if (character >= 0xA4 && character <= 0xBD) // a-z
-                    return Char.ToString((char)(character - 0x43));
-                else
-                {
-                    switch (character)
-                    {
-                        case (char)0x0:
-                            return "[END]\n";
-                        case (char)0x1:
-                            return "\n";
-                        case (char)0x5:
-                            return "\n\n";
-                        case (char)0x1A:
-                            return "e ";
-                        case (char)0x1B:
-                            return " t";
-                        case (char)0x1C:
-                            return "th";
-                        case (char)0x1D:
-                            return "he";
-                        case (char)0x1E:
-                            return "s ";
-                        case (char)0x1F:
-                            return "in";
-                        case (char)0x20:
-                            return " a";
-                        case (char)0x21:
-                            return "t ";
-                        case (char)0x22:
-                            return "an";
-                        case (char)0x23:
-                            return "re";
-                        case (char)0x24:
-                            return " s";
-                        case (char)0x25:
-                            return "er";
-                        case (char)0x26:
-                            return "ou";
-                        case (char)0x27:
-                            return "d ";
-                        case (char)0x28:
-                            return "to";
-                        case (char)0x29:
-                            return "n ";
-                        case (char)0x2A:
-                            return "ng";
-                        case (char)0x2B:
-                            return "ea";
-                        case (char)0x2C:
-                            return "es";
-                        case (char)0x2D:
-                            return " i";
-                        case (char)0x2E:
-                            return "o ";
-                        case (char)0x2F:
-                            return "ar";
-                        case (char)0x30:
-                            return "is";
-                        case (char)0x31:
-                            return " b";
-                        case (char)0x32:
-                            return "ve";
-                        case (char)0x33:
-                            return " w";
-                        case (char)0x34:
-                            return "me";
-                        case (char)0x35:
-                            return "or";
-                        case (char)0x36:
-                            return " o";
-                        case (char)0x37:
-                            return "st";
-                        case (char)0x38:
-                            return " c";
-                        case (char)0x39:
-                            return "at";
-                        case (char)0x3A:
-                            return "en";
-                        case (char)0x3B:
-                            return "nd";
-                        case (char)0x3C:
-                            return "on";
-                        case (char)0x3D:
-                            return "hi";
-                        case (char)0x3E:
-                            return "se";
-                        case (char)0x3F:
-                            return "as";
-                        case (char)0x40:
-                            return "ed";
-                        case (char)0x41:
-                            return "ha";
-                        case (char)0x42:
-                            return " m";
-                        case (char)0x43:
-                            return " f";
-                        case (char)0x44:
-                            return "r ";
-                        case (char)0x45:
-                            return "le";
-                        case (char)0x46:
-                            return "ow";
-                        case (char)0x47:
-                            return "g ";
-                        case (char)0x48:
-                            return "ce";
-                        case (char)0x49:
-                            return "om";
-                        case (char)0x4A:
-                            return "GI";
-                        case (char)0x4B:
-                            return "y ";
-                        case (char)0x4C:
-                            return "of";
-                        case (char)0x4D:
-                            return "ro";
-                        case (char)0x4E:
-                            return "ll";
-                        case (char)0x4F:
-                            return " p";
-                        case (char)0x50:
-                            return " y";
-                        case (char)0x51:
-                            return "ca";
-                        case (char)0x52:
-                            return "MA";
-                        case (char)0x53:
-                            return "te";
-                        case (char)0x54:
-                            return "f ";
-                        case (char)0x55:
-                            return "ur";
-                        case (char)0x56:
-                            return "yo";
-                        case (char)0x57:
-                            return "ti";
-                        case (char)0x58:
-                            return "l ";
-                        case (char)0x59:
-                            return " h";
-                        case (char)0x5A:
-                            return "ne";
-                        case (char)0x5B:
-                            return "it";
-                        case (char)0x5C:
-                            return "ri";
-                        case (char)0x5D:
-                            return "wa";
-                        case (char)0x5E:
-                            return "ac";
-                        case (char)0x5F:
-                            return "al";
-                        case (char)0x60:
-                            return "we";
-                        case (char)0x61:
-                            return "il";
-                        case (char)0x62:
-                            return "be";
-                        case (char)0x63:
-                            return "rs";
-                        case (char)0x64:
-                            return "u ";
-                        case (char)0x65:
-                            return " l";
-                        case (char)0x66:
-                            return "ge";
-                        case (char)0x67:
-                            return " d";
-                        case (char)0x68:
-                            return "li";
-                        case (char)0x69:
-                            return "..";
-                        case (char)0x6A:
-                            return "ne";
-                        case (char)0x6B:
-                            return "it";
-                        case (char)0x6C:
-                            return "ri";
-                        case (char)0x6D:
-                            return "wa";
-                        case (char)0x6E:
-                            return "ac";
-                        case (char)0x6F:
-                            return "al";
-                        case (char)0x7A:
-                            return "/";
-                        case (char)0xBE:
-                            return "'";
-                        case (char)0xBF:
-                            return ",";
-                        case (char)0xC0:
-                            return ".";
-                        case (char)0xC2:
-                            return "-";
-                        case (char)0xC4:
-                            return "!";
-                        case (char)0xC5:
-                            return "?";
-                        case (char)0xC8:
-                            return "ee";
-                        case (char)0xE0:
-                            return "%";
-                        case (char)0xFF:
-                            return " ";
-                        default:
-                            return "[?]";
-                    }
-                }
 
+                if (character >= 0x8A && character <= 0xA3) // A-Z
+                    return Char.ToString((char)(character - 0x49));
+
+                if (character >= 0xA4 && character <= 0xBD) // a-z
+                    return Char.ToString((char)(character - 0x43));
+
+                switch (character)
+                {
+                    case (char)0x0:
+                        return "[END]\n";
+                    case (char)0x1:
+                        return "\n";
+                    case (char)0x5:
+                        return "\n\n";
+                    case (char)0x1A:
+                        return "e ";
+                    case (char)0x1B:
+                        return " t";
+                    case (char)0x1C:
+                        return "th";
+                    case (char)0x1D:
+                        return "he";
+                    case (char)0x1E:
+                        return "s ";
+                    case (char)0x1F:
+                        return "in";
+                    case (char)0x20:
+                        return " a";
+                    case (char)0x21:
+                        return "t ";
+                    case (char)0x22:
+                        return "an";
+                    case (char)0x23:
+                        return "re";
+                    case (char)0x24:
+                        return " s";
+                    case (char)0x25:
+                        return "er";
+                    case (char)0x26:
+                        return "ou";
+                    case (char)0x27:
+                        return "d ";
+                    case (char)0x28:
+                        return "to";
+                    case (char)0x29:
+                        return "n ";
+                    case (char)0x2A:
+                        return "ng";
+                    case (char)0x2B:
+                        return "ea";
+                    case (char)0x2C:
+                        return "es";
+                    case (char)0x2D:
+                        return " i";
+                    case (char)0x2E:
+                        return "o ";
+                    case (char)0x2F:
+                        return "ar";
+                    case (char)0x30:
+                        return "is";
+                    case (char)0x31:
+                        return " b";
+                    case (char)0x32:
+                        return "ve";
+                    case (char)0x33:
+                        return " w";
+                    case (char)0x34:
+                        return "me";
+                    case (char)0x35:
+                        return "or";
+                    case (char)0x36:
+                        return " o";
+                    case (char)0x37:
+                        return "st";
+                    case (char)0x38:
+                        return " c";
+                    case (char)0x39:
+                        return "at";
+                    case (char)0x3A:
+                        return "en";
+                    case (char)0x3B:
+                        return "nd";
+                    case (char)0x3C:
+                        return "on";
+                    case (char)0x3D:
+                        return "hi";
+                    case (char)0x3E:
+                        return "se";
+                    case (char)0x3F:
+                        return "as";
+                    case (char)0x40:
+                        return "ed";
+                    case (char)0x41:
+                        return "ha";
+                    case (char)0x42:
+                        return " m";
+                    case (char)0x43:
+                        return " f";
+                    case (char)0x44:
+                        return "r ";
+                    case (char)0x45:
+                        return "le";
+                    case (char)0x46:
+                        return "ow";
+                    case (char)0x47:
+                        return "g ";
+                    case (char)0x48:
+                        return "ce";
+                    case (char)0x49:
+                        return "om";
+                    case (char)0x4A:
+                        return "GI";
+                    case (char)0x4B:
+                        return "y ";
+                    case (char)0x4C:
+                        return "of";
+                    case (char)0x4D:
+                        return "ro";
+                    case (char)0x4E:
+                        return "ll";
+                    case (char)0x4F:
+                        return " p";
+                    case (char)0x50:
+                        return " y";
+                    case (char)0x51:
+                        return "ca";
+                    case (char)0x52:
+                        return "MA";
+                    case (char)0x53:
+                        return "te";
+                    case (char)0x54:
+                        return "f ";
+                    case (char)0x55:
+                        return "ur";
+                    case (char)0x56:
+                        return "yo";
+                    case (char)0x57:
+                        return "ti";
+                    case (char)0x58:
+                        return "l ";
+                    case (char)0x59:
+                        return " h";
+                    case (char)0x5A:
+                        return "ne";
+                    case (char)0x5B:
+                        return "it";
+                    case (char)0x5C:
+                        return "ri";
+                    case (char)0x5D:
+                        return "wa";
+                    case (char)0x5E:
+                        return "ac";
+                    case (char)0x5F:
+                        return "al";
+                    case (char)0x60:
+                        return "we";
+                    case (char)0x61:
+                        return "il";
+                    case (char)0x62:
+                        return "be";
+                    case (char)0x63:
+                        return "rs";
+                    case (char)0x64:
+                        return "u ";
+                    case (char)0x65:
+                        return " l";
+                    case (char)0x66:
+                        return "ge";
+                    case (char)0x67:
+                        return " d";
+                    case (char)0x68:
+                        return "li";
+                    case (char)0x69:
+                        return "..";
+                    case (char)0x6A:
+                        return "ne";
+                    case (char)0x6B:
+                        return "it";
+                    case (char)0x6C:
+                        return "ri";
+                    case (char)0x6D:
+                        return "wa";
+                    case (char)0x6E:
+                        return "ac";
+                    case (char)0x6F:
+                        return "al";
+                    case (char)0x7A:
+                        return "/";
+                    case (char)0xBE:
+                        return "'";
+                    case (char)0xBF:
+                        return ",";
+                    case (char)0xC0:
+                        return ".";
+                    case (char)0xC2:
+                        return "-";
+                    case (char)0xC4:
+                        return "!";
+                    case (char)0xC5:
+                        return "?";
+                    case (char)0xC8:
+                        return "ee";
+                    case (char)0xE0:
+                        return "%";
+                    case (char)0xFF:
+                        return " ";
+                    default:
+                        return "[?]";
+                }
             }
 
             if (!File.Exists(path))
